@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dr-order-api
+spec:
+  type: ClusterIP
+  selector:
+    app: dr-order-api
+  ports:
+    - port: 80
+      targetPort: 8000
+      protocol: TCP
